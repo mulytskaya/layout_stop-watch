@@ -1,0 +1,66 @@
+@keyframes rotate-clock {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.clock {
+  box-sizing: border-box;
+  border: 1.6vmin dotted #000;
+  border-radius: 50%;
+  width: 80vmin;
+  height: 80vmin;
+  position: relative;
+}
+
+.clock__center {
+  z-index: 3;
+  background-color: #ff0;
+  border-radius: 50%;
+  width: 8vmin;
+  height: 8vmin;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%)translateY(50%);
+}
+
+.clock__seconds {
+  z-index: 1;
+  transform-origin: bottom;
+  background-color: #0f0;
+  width: 1.6vmin;
+  height: 38.0952vmin;
+  animation: 5s linear infinite rotate-clock;
+  position: absolute;
+  bottom: 50%;
+  left: 37.7143vmin;
+  transform: translateX(-50%);
+}
+
+.clock__minutes {
+  z-index: 2;
+  transform-origin: bottom;
+  background-color: #00f;
+  width: 2.66667vmin;
+  height: 26.6667vmin;
+  animation: 60s linear infinite rotate-clock;
+  position: absolute;
+  bottom: 50%;
+  left: 37.3333vmin;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=index.971c2ea4.css.map */
